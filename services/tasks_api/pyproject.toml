@@ -37,5 +37,4 @@ description = "Tasks manager api"
 authors = ["Ola Ajibode <ola.ajibode@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-requires-python = ">=3.7"
 package-mode = true
