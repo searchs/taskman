@@ -31,4 +31,4 @@ bandit = "^1.8.3"
 
 
 [tool.poetry]
-package-mode = false
+package-mode = true
