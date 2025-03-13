@@ -20,10 +20,8 @@
 #     assert response.status_code == status.HTTP_200_OK
 #     assert response.json() == {"message": "OK"}
 
+
 from fastapi.testclient import TestClient
-import pytest
-from datetime import datetime as dt
-from datetime import timezone as tz
 from your_app import app  # Import the app from the actual file where it is defined.
 
 client = TestClient(app)

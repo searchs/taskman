@@ -1,5 +1,3 @@
-from datetime import datetime as dt
-from datetime import timezone as tz
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
