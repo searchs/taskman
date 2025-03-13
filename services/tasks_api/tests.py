@@ -79,6 +79,7 @@ def test_task_create_invalid_id():
 def test_task_create_empty_title():
     # Ensure that an empty title raises an error (or handles it as needed)
     task_id = uuid4()
+    print(f"\n\tTASK ID: {task_id}")
     owner = "User 1"
 
     with pytest.raises(
