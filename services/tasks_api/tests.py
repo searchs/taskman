@@ -27,10 +27,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from main import app
-from models import (
-    Task,
-    TaskStatus,
-)
+from models import Task, TaskStatus
 
 client = TestClient(app)
 
