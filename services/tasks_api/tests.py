@@ -1,21 +1,41 @@
+# import pytest
+# from fastapi import status
+# from starlette.testclient import TestClient
+
+# from main import app
+
+
+# @pytest.fixture
+# def client():
+#     return TestClient(app)
+
+
+# def test_health_check(client):
+#     """
+#     GIVEN
+#     WHEN health check endpoint is called with GET method
+#     THEN response with status 200 and body OK is returned
+#     """
+#     response = client.get("/api/health-check/")
+#     assert response.status_code == status.HTTP_200_OK
+#     assert response.json() == {"message": "OK"}
+
+from fastapi.testclient import TestClient
 import pytest
-from fastapi import status
-from starlette.testclient import TestClient
+from datetime import datetime as dt
+from datetime import timezone as tz
+from your_app import app  # Import the app from the actual file where it is defined.
 
-from main import app
-
-
-@pytest.fixture
-def client():
-    return TestClient(app)
+client = TestClient(app)
 
 
-def test_health_check(client):
-    """
-    GIVEN
-    WHEN health check endpoint is called with GET method
-    THEN response with status 200 and body OK is returned
-    """
+def test_health_check():
     response = client.get("/api/health-check/")
-    assert response.status_code == status.HTTP_200_OK
+    assert response.status_code == 200
     assert response.json() == {"message": "OK"}
+
+
+def test_root():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert response.json() == {"message": "Allo Ola"}

@@ -21,11 +21,6 @@ async def health_check():
     return {"message": "OK"}
 
 
-@app.get("/app", tags=["basics"])
-async def generics():
-    return {"app_details": "fastapi vue", "time": dt.now(tz.utc)}
-
-
 @app.get("/")
 async def root():
     return {"message": "Allo Ola"}
