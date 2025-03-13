@@ -22,7 +22,7 @@
 
 
 from fastapi.testclient import TestClient
-from your_app import app  # Import the app from the actual file where it is defined.
+from main import app
 
 client = TestClient(app)
 
