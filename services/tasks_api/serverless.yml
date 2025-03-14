@@ -10,7 +10,7 @@ provider:
   runtime: python3.12
   region: ${opt:region, 'eu-west-1'}
   stage: ${opt:stage, 'development'}
-  logRetentionInDays: 90
+  logRetentionInDays: 30
   environment:
     APP_ENVIRONMENT: ${self:provider.stage}
 
